@@ -118,7 +118,7 @@
 <body>
 
 <header>
-    <h1>🍓 Welcome to Fresh Sip Fruit Juice Corner Eluru 🍊</h1>
+    <h1>🍓 Welcome to Fresh Sip Fruit Juice Corner Eluru Santhi nagar🍊</h1>
     <h3>Pure | Fresh | Healthy | Delicious</h3>
 </header>
 
