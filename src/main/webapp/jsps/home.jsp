@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>KK FUNDA Home Page</title>
 <link href="images/kkfunda.jpg" rel="icon">
-<!-- Bootstrap CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
     body {
@@ -85,7 +84,7 @@
     <!-- Service Links -->
     <div class="info-card text-center">
         <h4>⚙️ Our Services</h4>
-        <p><a href="services/employee/getEmployeeDetails" class="btn btn-success">Get Employee Details</a></p>
+        <p><a href="services/employee/getEmployeeDetails.jsp" class="btn btn-success">Get Employee Details</a></p>
     </div>
 
 </div>
@@ -95,9 +94,7 @@
     <p><small>Powered by <a href="https://google.com/">KK FUNDA</a></small></p>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 
 </body>
 </html>
