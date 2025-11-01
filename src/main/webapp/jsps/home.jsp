@@ -7,45 +7,119 @@
 <title>KK FUNDA Home Page</title>
 <link href="images/kkfunda.jpg" rel="icon">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
     body {
-        background: #f9f9f9;
-        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #f9f9f9, #f0f9ff, #fff9f0);
+        font-family: "Poppins", sans-serif;
+        animation: fadeIn 1s ease-in-out;
     }
+
     header {
-        background: linear-gradient(90deg, #007bff, #00c6ff);
+        background: linear-gradient(90deg, #0066ff, #00ccff, #00ff99);
         color: white;
-        padding: 20px;
+        padding: 30px;
         text-align: center;
+        animation: slideDown 1s ease;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     }
-    h1, h3 {
-        margin: 10px 0;
+
+    header h1 {
+        font-weight: 700;
+        font-size: 2rem;
+        text-shadow: 2px 2px #004;
     }
+
+    h3 {
+        margin-top: 10px;
+        font-weight: 400;
+    }
+
     .info-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 700px;
+        background: linear-gradient(145deg, #ffffff, #e6f7ff);
+        border-left: 6px solid #007bff;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+        padding: 25px;
+        margin: 25px auto;
+        max-width: 750px;
+        transition: transform 0.3s, box-shadow 0.3s;
     }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .info-card h3 {
+        color: #007bff;
+        font-weight: 600;
+    }
+
     footer {
-        margin-top: 30px;
-        background: #222;
-        color: white;
-        padding: 15px;
+        margin-top: 40px;
+        background: linear-gradient(90deg, #222, #333, #111);
+        color: #fff;
+        padding: 20px;
         text-align: center;
+        box-shadow: 0px -3px 6px rgba(0,0,0,0.3);
     }
+
     footer a {
-        color: #00c6ff;
+        color: #00e0ff;
         text-decoration: none;
+        font-weight: 500;
+    }
+
+    footer a:hover {
+        color: #ffcc00;
+    }
+
+    .btn-custom {
+        background: linear-gradient(90deg, #ff6600, #ff9900);
+        border: none;
+        color: white;
+        font-weight: 600;
+        border-radius: 25px;
+        padding: 10px 25px;
+        transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+        background: linear-gradient(90deg, #ff3300, #ff6600);
+        transform: scale(1.05);
+    }
+
+    .btn-success {
+        background: linear-gradient(90deg, #00cc66, #00e699);
+        border: none;
+        font-weight: 600;
+        border-radius: 25px;
+        padding: 10px 25px;
+    }
+
+    .btn-success:hover {
+        background: linear-gradient(90deg, #00994d, #00cc66);
+        transform: scale(1.05);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+        from {transform: translateY(-100px);}
+        to {transform: translateY(0);}
     }
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>🚀 Welcome to KK FUNDA DEVOPS SRE Portal 🚀</h1>
+    <h1>🚀 Welcome to <span style="color: #ffeb3b;">KK FUNDA</span> DEVOPS SRE Portal 🚀</h1>
     <h3>Training | Development | Consulting</h3>
 </header>
 
@@ -74,23 +148,23 @@
     <!-- Contact Info -->
     <div class="info-card text-center">
         <img src="images/kkfunda.jpg" alt="KK FUNDA Logo" width="120" class="mb-3 rounded-circle shadow">
-        <h4>KK FUNDA</h4>
+        <h4 style="color:#ff6600;">KK FUNDA</h4>
         <p><b>Address:</b> Martha Halli, Bangalore</p>
-        <p><b>Phone:</b> +91-9676831734</p>
+        <p><b>Phone:</b> <span style="color:#00b300;">+91-9676831734</span></p>
         <p><b>Email:</b> <a href="mailto:kkeducationblr@gmail.com">kkeducationblr@gmail.com</a></p>
-        <a href="mailto:kkeducation@gmail.com" class="btn btn-primary mt-2">📧 Mail to KK FUNDA</a>
+        <a href="mailto:kkeducation@gmail.com" class="btn btn-custom mt-2">📧 Mail to KK FUNDA</a>
     </div>
 
     <!-- Service Links -->
     <div class="info-card text-center">
-        <h4>⚙️ Our Services</h4>
-        <p><a href="services/employee/getEmployeeDetails.jsp" class="btn btn-success">Get Employee Details</a></p>
+        <h4 style="color:#ff0066;">⚙️ Our Services</h4>
+        <p><a href="services/employee/getEmployeeDetails.jsp" class="btn btn-success">💼 Get Employee Details</a></p>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2024 KK FUNDA Training & Development Center</p>
+    <p>© 2025 <span style="color:#00e0ff;">KK FUNDA Training & Development Center</span></p>
     <p><small>Powered by <a href="https://google.com/">KK FUNDA</a></small></p>
 </footer>
 
