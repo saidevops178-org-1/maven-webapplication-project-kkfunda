@@ -14,7 +14,7 @@ stage('DEPLOYING TO TOMCAT'){
 
       curl -u sai:sai \
 --upload-file /var/lib/jenkins/workspace/scripted-pipeline/target/maven-web-application.war \
-"http://13.127.27.145:8080/manager/text/deploy?path=/maven-web-application&update=true"
+"http://13.235.241.196:8080/manager/text/deploy?path=/maven-web-application&update=true"
           
         """
 }
