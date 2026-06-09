@@ -1,15 +1,23 @@
-node {
+node 
+{
+    try
+    {
+    
 def mavenhomepath =tool name: "mymaven-3.9.10"
-stage('GIT CHECKOUT'){
+stage('GIT CHECKOUT')
+        {
 git branch: 'dev', url: 'https://github.com/saidevops178-org-1/maven-webapplication-project-kkfunda.git'
-}
-stage('MAVEN BUILD'){
+        }
+stage('MAVEN BUILD')
+        {
 sh "${mavenhomepath}/bin/mvn clean package"
-}
-stage('SONARQUBE REPORT'){
+        }
+stage('SONARQUBE REPORT')
+        {
 sh "${mavenhomepath}/bin/mvn clean package sonar:sonar"
-}
-stage('DEPLOYING TO TOMCAT'){
+        }
+stage('DEPLOYING TO TOMCAT')
+        {
     sh """
 
       curl -u sai:sai \
@@ -17,5 +25,15 @@ stage('DEPLOYING TO TOMCAT'){
 "http://3.111.144.186:8080/manager/text/deploy?path=/maven-web-application&update=true"
           
         """
-}
-}
+        }
+    }//try close
+    catch (e) 
+    {
+       currentBuild.result = "FAILED"
+    }
+    finally 
+    {
+    // Success or failure, always send notifications
+    //notifyBuild(currentBuild.result)
+   }
+}//Node Close
