@@ -40,9 +40,9 @@ stage('DEPLOYING TO TOMCAT')
 }//Node Close
 
 
-def notifyBuild(buildStatus = 'STARTEDd') {
+def notifyBuild(buildStatus = 'STARTED') {
   // build status of null means successful
-  buildStatus =  buildStatus ?: 'SUCCESSs'
+  buildStatus =  buildStatus ?: 'SUCCESS'
 
   // Default values
   def colorName = 'RED'
