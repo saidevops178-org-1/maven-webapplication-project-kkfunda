@@ -11,7 +11,7 @@ git branch: 'dev', url: 'https://github.com/saidevops178-org-1/maven-webapplicat
         }
 stage('MAVEN BUILD')
         {
-sh "${mavenhomepath}/bin/mvn clean packageeee"
+sh "${mavenhomepath}/bin/mvn clean package"
         }
 stage('SONARQUBE REPORT')
         {
