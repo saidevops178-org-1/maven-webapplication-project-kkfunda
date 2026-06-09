@@ -1,5 +1,6 @@
 node 
 {
+    notifyBuild(buildStatus = 'STARTED')
     try
     {
     
