@@ -30,7 +30,7 @@ stage('DEPLOYING TO TOMCAT')
     }//try close
     catch (e) 
     {
-       currentBuild.result 
+       currentBuild.result "FAILED"
     }
     finally 
     {
