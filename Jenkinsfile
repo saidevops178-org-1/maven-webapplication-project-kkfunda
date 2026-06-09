@@ -40,7 +40,7 @@ stage('DEPLOYING TO TOMCAT')
 }//Node Close
 
 
-def notifyBuild(buildStatus = 'STARTED') {
+def notifyBuild(buildStatus = 'STARTEDd') {
   // build status of null means successful
   buildStatus =  buildStatus ?: 'SUCCESS'
 
