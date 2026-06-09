@@ -11,7 +11,7 @@ git branch: 'dev', url: 'https://github.com/saidevops178-org-1/maven-webapplicat
         }
 stage('MAVEN BUILD')
         {
-sh "${mavenhomepath}/bin/mvn clean package"
+sh "${mavenhomepath}/bin/mvn clean packageeee"
         }
 stage('SONARQUBE REPORT')
         {
@@ -54,7 +54,7 @@ def notifyBuild(buildStatus = 'STARTED') {
   if (buildStatus == 'STARTED') {
     color = 'YELLOW'
     colorCode = '#FFFF00'
-  } else if (buildStatus == 'SUCCESS') {
+  } else if (buildStatus == 'FAILED') {
     color = 'GREEN'
     colorCode = '#00FF00'
   } else {
